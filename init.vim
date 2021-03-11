@@ -238,3 +238,7 @@ nnoremap <F3> :NERDTreeToggle<CR>               " 开启/关闭nerdtree快捷键
 "    let g:airline_symbols.notexists = 'Ɇ'
 "    let g:airline_symbols.whitespace = 'Ξ'
 
+
+"
+    let g:aireline#extension#tabline#enabled=1
+
