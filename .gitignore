@@ -7,3 +7,6 @@ node_modules
 .psci
 output
 plugged
+GPATH
+GRTAGS
+GTAGS
