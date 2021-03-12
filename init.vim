@@ -2,7 +2,7 @@
 " Alex's Neovim Configuration
 "
 
-source C:\DevTools\XDG\nvim\basic.vim
+source $XDG_CONFIG_HOME\nvim\basic.vim
 
 "----   基本设置    ----------------------------------------------------------------
 
@@ -157,14 +157,14 @@ let g:python_host_prog='C:\Users\XIAOJIE\AppData\Local\Programs\Python\Python37\
 
 
 "----   vim-plug    ------------------------------------------------------------
-if empty(glob('C:\DevTools\XDG\nvim\autoload\plug.vim'))
-    silent !curl -fLo C:\DevTools\XDG\nvim\autoload\plug.vim --create-dirs
+if empty(glob('$XDG_CONFIG_HOME\nvim\autoload\plug.vim'))
+    silent !curl -fLo %XDG_CONFIG_HOME%\nvim\autoload\plug.vim --create-dirs
         \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 "----   Specify a directory for plugins BEGIN   --------------------------------
-call plug#begin('C:\DevTools\XDG\nvim\plugged')
+call plug#begin('$XDG_CONFIG_HOME\nvim\plugged')
 
 "----   可视化缩进  ------------------------------------------------------------
     Plug 'Yggdroot/indentLine'
