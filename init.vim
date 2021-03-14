@@ -97,7 +97,7 @@ set background=dark
 
 " Set extra options when running in GUI mode
 if has('gui_running') || has('nvim')
-    set guioptions-=T
+"    set guioptions-=T
     set guioptions-=e
     set t_Co=256
     set guitablabel=%M\ %t
@@ -111,8 +111,9 @@ set fileformats=dos,unix,mac
 "set guifont=YaHei\ Ubuntu\ Hybrid:h10
 "set guifont=Consolas:h12:cANSI
 "set guifont=Microsoft\ YaHei\ UI:h10
-"set guifont=Inconsolata\ for\ Powerline:h12:cANSI
-set guifont=Inconsolata:h11:cANSI
+"set guifont=Inconsolata\ for\ Powerline:h11:cANSI
+set guifont=Inconsolata-dz\ for\ Powerline:h11:cANSI
+"set guifont=Inconsolata:h11:cANSI
 set guifontwide=Microsoft\ YaHei\ UI:h11
 
 try
@@ -154,7 +155,7 @@ let g:python_host_prog='C:\Users\XIAOJIE\AppData\Local\Programs\Python\Python37\
 "let g:pythonhome='D:\denv\msys64\mingw64\bin'      " Python 2
 "let g:pythondll='D:\denv\msys64\mingw64\lib\libpython2.7.dll.a'
 
-
+let g:coc_node_path='C:\Program Files\nodejs\node.exe'
 
 "-------------------------------------------------------------------------------
 "   vim-plug
@@ -189,6 +190,7 @@ call plug#begin('$XDG_CONFIG_HOME\nvim\plugged')
 "---    状态栏  ----------------------------------------------------------------
     Plug 'vim-airline/vim-airline'          " Lean & mean status/tabline for vim
     Plug 'vim-airline/vim-airline-themes'   " Themes for airline
+"    Plug 'bling/vim-bufferline'
     Plug 'flazz/vim-colorschemes'           " Colorschemes
 
 "---    COC     ----------------------------------------------------------------
@@ -196,6 +198,8 @@ call plug#begin('$XDG_CONFIG_HOME\nvim\plugged')
 
 "----   彩虹括号    ------------------------------------------------------------
     Plug 'luochen1990/rainbow'
+    Plug 'jiangmiao/auto-pairs'
+    Plug 'preservim/nerdcommenter'
 
 "----   Initialize plugin system END -------------------------------------------
 call plug#end()
@@ -232,8 +236,9 @@ let g:indent_guides_start_level           = 2  " 从第二层开始可视化显�
     endif
 
     set laststatus=2                    " 永远显示状态栏
+    set showtabline=2
 
-"    let g:airline_powerline_fonts = 1
+    let g:airline_powerline_fonts = 1
     " unicode symbols
 "    let g:airline_left_sep = '»'
 "    let g:airline_left_sep = '▶'
@@ -275,24 +280,41 @@ let g:indent_guides_start_level           = 2  " 从第二层开始可视化显�
 "    let g:airline_symbols.linenr = '⭡'
 
 " theme
-    let g:airline_theme="badwolf"
-"    let g:airline_theme='dark'
+"    let g:airline_theme="badwolf"
+    let g:airline_theme='dark'
 
 " tabline
-    let g:airline#extensions#tabline#show_close_button = 0
-    let g:airline#extensions#tabline#buffer_nr_show = 1
-    let g:airline#extensions#tabline#enabled = 1        " 开启tabline
-    let g:airline#extensions#tabline#tab_nr_type = 1    " tab number
-    let g:airline#extensions#tabline#show_tab_nr = 1
+    let g:airline#extensions#tabline#enabled = 1
+"    let g:airline#extensions#bufferline#enabled = 1
     let g:airline#extensions#tabline#left_sep = ' '
     let g:airline#extensions#tabline#left_alt_sep = '|'
     let g:airline#extensions#tabline#formatter = 'default'
-    let g:airline#extensions#tabline#fnametruncate = 16
-    let g:airline#extensions#tabline#fnamecollapse = 2
+
+"    let g:airline#extensions#tabline#show_close_button = 1
+"    let g:airline#extensions#tabline#buffer_nr_show = 0
+"    let g:airline#extensions#tabline#tab_nr_type = 1    " tab number
+"    let g:airline#extensions#tabline#show_tab_nr = 1
+"    let g:airline#extensions#tabline#fnametruncate = 16
+"    let g:airline#extensions#tabline#fnamecollapse = 2
+"    let g:airline#extensions#tabline#buffer_idx_mode = 1
+"    let g:airline#extensions#tagbar#enabled = 1
+"    let g:airline#extensions#tabline#show_tabs = 1
+"    let g:airline#extensions#tabline#show_buffers = 1
+
+    let g:airline#extensions#keymap#enabled = 1
     let g:airline#extensions#tabline#buffer_idx_mode = 1
-    let g:airline#extensions#tagbar#enabled = 1
-    let g:airline#extensions#tabline#show_tabs = 1
-    let g:airline#extensions#tabline#show_buffers = 1
+    let g:airline#extensions#tabline#buffer_idx_format = {
+        \ '0': '0 ',
+        \ '1': '1 ',
+        \ '2': '2 ',
+        \ '3': '3 ',
+        \ '4': '4 ',
+        \ '5': '5 ',
+        \ '6': '6 ',
+        \ '7': '7 ',
+        \ '8': '8 ',
+        \ '9': '9 '
+    \}
 
 "    " tab or buf 1
 "    nnoremap <leader>1 :call te#utils#tab_buf_switch(1)<cr>
