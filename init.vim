@@ -133,8 +133,8 @@ set fileformats=dos,unix,mac
 "set guifont=Consolas:h12:cANSI
 "set guifont=Microsoft\ YaHei\ UI:h10
 "set guifont=Inconsolata\ for\ Powerline:h11:cANSI
-set guifont=Inconsolata-dz\ for\ Powerline:h11:cANSI
-"set guifont=Inconsolata:h11:cANSI
+"set guifont=Inconsolata-dz\ for\ Powerline:h11:cANSI
+set guifont=Inconsolata:h11:cANSI
 set guifontwide=Microsoft\ YaHei\ UI:h11
 
 try
@@ -193,11 +193,13 @@ call plug#begin('$XDG_CONFIG_HOME\nvim\plugged')
 
 "----   Code/Project navigation     --------------------------------------------
     Plug 'scrooloose/nerdtree'              " Project and file navigation
+    Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 "    Plug 'majutsushi/tagbar'                " Class/module browser
     Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }  " Nead visual-cpp-build-tools
 "    Plug 'kien/ctrlp.vim'                   " Fast transitions on project files
 "    Plug 'Shougo/unite.vim'
 "    Plug 'Shougo/vimfiler.vim'
+    Plug 'liuchengxu/vista.vim '
 
 "----   Languages support   ----------------------------------------------------
     Plug 'octol/vim-cpp-enhanced-highlight'
@@ -305,8 +307,8 @@ let g:indent_guides_start_level           = 2  " 从第二层开始可视化显�
 " tabline
     let g:airline#extensions#tabline#enabled = 1
 "    let g:airline#extensions#bufferline#enabled = 1
-    let g:airline#extensions#tabline#left_sep = ' '
-    let g:airline#extensions#tabline#left_alt_sep = '|'
+"    let g:airline#extensions#tabline#left_sep = ''
+"    let g:airline#extensions#tabline#left_alt_sep = '|'
     let g:airline#extensions#tabline#formatter = 'default'
 
 "    let g:airline#extensions#tabline#show_close_button = 1
