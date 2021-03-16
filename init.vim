@@ -2,6 +2,27 @@
 " Alex's Neovim Configuration
 "
 
+" Linux:
+" $HOME/.config is where per-user configuration files go if there is no $XDG_CONFIG_HOME.
+" $HOME/.cache is where per-user cache files go if there is no $XDG_CACHE_HOME.
+" $HOME/.local/share is where per-user data files go if there is no $XDG_DATA_HOME.
+"
+" Windows
+" %USERPROFILE%/AppData/Local/ a.k.a. %LOCALAPPDATA% — where per-user data files for this machine go
+" %USERPROFILE%/AppData/Roaming/ a.k.a. %APPDATA% — where per-user data files that a roaming user can access from multiple machines go
+" %USERPROFILE%/AppData/Local/Temp/ a.k.a. %TEMP% — where per-user temporary files go
+"
+" %SystemDrive%                             系统安装的磁盘分区
+" %SystemRoot% = %Windir% WINDODWS          系统目录
+" %ProgramFiles%　                          应用程序默认安装目录
+" %ProgramFiles(x86)%　                     应用程序默认安装目录
+" %AppData%                                 应用程序数据目录
+" %CommonProgramFiles%                      公用文件目录
+" %HomePath%                                当前活动用户目录
+" %Temp% =%Tmp%                             当前活动用户临时目录
+" %DriveLetter%                             逻辑驱动器分区
+" %HomeDrive%                               当前用户系统所在分区
+
 source $XDG_CONFIG_HOME\nvim\basic.vim
 
 "----   基本设置    ----------------------------------------------------------------
@@ -151,11 +172,9 @@ set wrap
 
 " python executables for different plugins
 let g:python_host_prog='C:\Python27\python.exe'      " Python 2
-let g:python_host_prog='C:\Users\XIAOJIE\AppData\Local\Programs\Python\Python37\python.exe'      " Python 3
-"let g:pythonhome='D:\denv\msys64\mingw64\bin'      " Python 2
-"let g:pythondll='D:\denv\msys64\mingw64\lib\libpython2.7.dll.a'
-
-let g:coc_node_path='C:\Program Files\nodejs\node.exe'
+"let g:python3_host_prog='C:\Users\XIAOJIE\AppData\Local\Programs\Python\Python37\python.exe'      " Python 3
+let g:python3_host_prog='$LOCALAPPDATA\Programs\Python\Python38\python.exe'      " Python 3
+let g:coc_node_path='$ProgramFiles\nodejs\node.exe'
 
 "-------------------------------------------------------------------------------
 "   vim-plug
