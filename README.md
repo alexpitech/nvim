@@ -25,3 +25,6 @@ ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nv
 * [Vim有哪些曾经有名但是现在过时插件](https://www.zhihu.com/question/31934850)
 * [neovim 下 defx 的安装与使用](https://learnku.com/articles/34885)
 
+https://fastly.net.ipaddress.com/github.global.ssl.fastly.net#ipinfo
+https://github.com.ipaddress.com/#ipinfo
+修改C:\Windows\System32\drivers\etc\hosts

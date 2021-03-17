@@ -31,7 +31,7 @@ source $XDG_CONFIG_HOME\nvim\basic.vim
 set nocompatible    " 非兼容模式
 
 " Sets how many lines of history Vim has to remember
-set history=1000                   " 设置历史记录条数   
+set history=1000                   " 设置历史记录条数
 
 " Enable filetype plugins
 filetype on
@@ -133,8 +133,8 @@ set fileformats=dos,unix,mac
 "set guifont=Consolas:h12:cANSI
 "set guifont=Microsoft\ YaHei\ UI:h10
 "set guifont=Inconsolata\ for\ Powerline:h11:cANSI
-"set guifont=Inconsolata-dz\ for\ Powerline:h11:cANSI
-set guifont=Inconsolata:h11:cANSI
+set guifont=Inconsolata-dz\ for\ Powerline:h11:cANSI
+"set guifont=Inconsolata:h11:cANSI
 set guifontwide=Microsoft\ YaHei\ UI:h11
 
 try
@@ -199,7 +199,7 @@ call plug#begin('$XDG_CONFIG_HOME\nvim\plugged')
 "    Plug 'kien/ctrlp.vim'                   " Fast transitions on project files
 "    Plug 'Shougo/unite.vim'
 "    Plug 'Shougo/vimfiler.vim'
-    Plug 'liuchengxu/vista.vim '
+    Plug 'liuchengxu/vista.vim'
 
 "----   Languages support   ----------------------------------------------------
     Plug 'octol/vim-cpp-enhanced-highlight'
